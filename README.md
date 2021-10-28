@@ -18,19 +18,19 @@ Utilizando as seguintes tecnologias:
 ## Start
 > utilizandi o terminal dentro do diretório do [projeto](./project_default/) utilizar os <u><b>seguintes comandos:</b></u>
 ```bash
-   npm install
+   mvn install
 ```
 > Este irá instalar as depedências no projeto
 ```bash
-   npm clean verify
+   mvn clean verify
 ```
 > Este irá rodar os testes e criar o cucumber report personalizado - lembrando que irá apagar os históricos
 ```bash
-   npm verify
+   mvn verify
 ```
 > Este irá rodar os testes e criar o cucumber report personalizado - manterndo os históricos
 ```bash
-   npm test
+   mvn test
 ```
 > Este irá rodar os cenários, no entanto não irá criar o cucumber report personalizado, mas será criados:
 - cucumber report default
