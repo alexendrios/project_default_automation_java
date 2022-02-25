@@ -137,6 +137,12 @@
             <artifactId>jackson-annotations</artifactId>
             <version>2.9.9</version>
         </dependency>
+        <dependency>
+            <groupId>com.applitools</groupId>
+            <artifactId>eyes-sdk-core-java3</artifactId>
+            <version>3.212.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -162,7 +168,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>br.com.fiserv.chargeback.test.automacao</projectName>
+                            <projectName>br.com.project_default.test.automacao_web</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report/report-custom</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber-report/report.json</cucumberOutput>
                         </configuration>

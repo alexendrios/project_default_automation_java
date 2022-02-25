@@ -1,5 +1,6 @@
 package br.com.project_default.utils;
 
+
 import io.cucumber.core.api.Scenario;
 import io.qameta.allure.Allure;
 import lombok.Cleanup;
@@ -32,7 +33,8 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class Utils {
 
@@ -43,13 +45,11 @@ public class Utils {
 			try{
 
 				PageLoadStrategy pageLoadStrategy = PageLoadStrategy.NORMAL;
-				String downloadFilepath = "C:\\Users\\fbctl1f\\Downloads";
-
+			
 				HashMap<String, Object> chromePreferences = new HashMap<String, Object>();
 				chromePreferences.put("profile.default_content_settings.popups", 0);
 				chromePreferences.put("download.prompt_for_download", "false");
-				chromePreferences.put("download.default_directory", downloadFilepath);
-
+			
 				ChromeOptions options = new ChromeOptions();
 				options.setPageLoadStrategy(pageLoadStrategy);
 				//options.addArguments("--headless");
@@ -67,7 +67,7 @@ public class Utils {
 
 				ChromeDriverService driverService = ChromeDriverService.createDefaultService();
 				driver = new ChromeDriver(driverService ,options);
-				driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
 			}catch(Exception e){
 				Assert.fail(e.toString());
@@ -295,22 +295,7 @@ public class Utils {
 		bw.close();
 	}
 
-	public static String lerArquivo(String file){
-		File path = new File(file);
-		String texto = "";
-		try {
-			FileReader fileReader = new FileReader("./src/test/resources/login/"+path);
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
-			String linha = "";
-			while ((linha = bufferedReader.readLine()) != null){
-				texto += linha;
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return texto;
-	}
-
+	
 	public static boolean verificarArquivo(String path){
 		File file = new File(path);
 		if (file.exists()){
@@ -368,4 +353,6 @@ public class Utils {
 		}
 		return existe;
 	}
+
+
 }

@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         },
         features = "classpath:features",
         glue = {"br.com.project_default.steps"},
-        //tags = {" "},
+//        tags = {"@CT_001_006_login"},
         snippets = SnippetType.UNDERSCORE,
         strict = false,
         dryRun = false,

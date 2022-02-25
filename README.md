@@ -5,15 +5,6 @@ Utilizando as seguintes tecnologias:
 - Selenium
 - Allure
 > Proposta de Arquitetura para realizar Testes Automatizados em Java
-## Setup
-> Setar o usário na classe  [Utils](project_default/src/test/java/br/com/project_default/utils/Utils.java) no método:
-```java
-    public static WebDriver getDriver() {
-        ....
-    String downloadFilepath = "C:\\Users\\<usuário>\\Downloads";
-        ....
-    }
-```
 > Setar o no diretóriochromeDriver [drivers](./project_default/src/test/resources/drivers/) 
 ## Start
 > utilizandi o terminal dentro do diretório do [projeto](./project_default/) utilizar os <u><b>seguintes comandos:</b></u>
